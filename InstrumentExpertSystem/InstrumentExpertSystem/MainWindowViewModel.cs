@@ -10,7 +10,7 @@ namespace InstrumentExpertSystem
 {
     class MainWindowViewModel : INotifyPropertyChanged
     {
-        private KnowledgeBase knowledgeBase;
+        private KnowledgeBase knowledgeBase { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -82,8 +82,16 @@ namespace InstrumentExpertSystem
             System.IO.FileInfo fInfo = new System.IO.FileInfo(fDialog.FileName);
             string strFileName = fInfo.Name;
             string strFilePath = fInfo.DirectoryName;
-            knowledgeBase = KnowledgeBaseSerialization.LoadKnowledgeBase(strFilePath + "\\" + strFileName);
-            OnPropertyChanged("KnowledgeBaseInstrumentsCount");
+            try
+            {
+                knowledgeBase = KnowledgeBaseSerialization.LoadKnowledgeBase(strFilePath + "\\" + strFileName);
+            }
+            catch
+            {
+                MessageBox.Show("Cannot read file");
+                knowledgeBase = new KnowledgeBase();
+            }
+        //    OnPropertyChanged("KnowledgeBaseInstrumentsCount");
         }
 
         //private void SavePerosn(Person _person)
