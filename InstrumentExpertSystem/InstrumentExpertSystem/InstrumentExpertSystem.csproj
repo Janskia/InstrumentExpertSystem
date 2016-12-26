@@ -55,6 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EnvelopeType.cs" />
+    <Compile Include="Instrument.cs" />
+    <Compile Include="KnowledgeBaseSerialization.cs" />
+    <Compile Include="KnowledgeBase.cs" />
+    <Compile Include="MainWindowViewModel.cs" />
+    <Compile Include="RelayCommand.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

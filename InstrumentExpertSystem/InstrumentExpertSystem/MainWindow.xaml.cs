@@ -24,5 +24,10 @@ namespace InstrumentExpertSystem
         {
             InitializeComponent();
         }
+
+        private void LoadKnowledgeBase_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
