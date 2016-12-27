@@ -23,6 +23,7 @@ namespace InstrumentExpertSystem
         private IsMelodicParameter isMelodicParameter = new IsMelodicParameter();
         private EnvelopeTypeParameter envelopeTypeParameter = new EnvelopeTypeParameter();
 
+        private InferenceHistory inferenceHistory = new InferenceHistory();
         #region PublicProperties
         public EnvelopeType EnvelopeType
         {
@@ -249,6 +250,11 @@ namespace InstrumentExpertSystem
         {
             get; set;
         }
+
+        public string InferenceHistory
+        {
+            get; set;
+        }
         #endregion
 
         #region PrivateProperties
@@ -303,7 +309,7 @@ namespace InstrumentExpertSystem
 
         public MainWindowViewModel()
         {
-            knowledgeBase = new KnowledgeBase();
+            knowledgeBase = new KnowledgeBase(inferenceHistory);
         }
 
         public ICommand LoadKnowledgeBase { get { return new RelayCommand(LoadKnowledgeBaseExecute); } }
@@ -320,11 +326,12 @@ namespace InstrumentExpertSystem
             try
             {
                 knowledgeBase = KnowledgeBaseSerialization.LoadKnowledgeBase(strFilePath + "\\" + strFileName);
+                knowledgeBase.InferenceHistory = inferenceHistory;
             }
             catch
             {
                 MessageBox.Show("Cannot read file");
-                knowledgeBase = new KnowledgeBase();
+                knowledgeBase = new KnowledgeBase(inferenceHistory);
             }
             //    OnPropertyChanged("KnowledgeBaseInstrumentsCount");
         }
@@ -332,6 +339,15 @@ namespace InstrumentExpertSystem
 
         private void IdentifyInstrumentExecute()
         {
+            inferenceHistory.Clear();
+            knowledgeBase.InferenceHistory = inferenceHistory;
+            inferenceHistory.AddLine("Looking for instrument with parameters: ");
+            foreach (InstrumentParameter parameter in SelectedParameters)
+            {
+                inferenceHistory.AddLine(parameter.ToString());
+            }
+            inferenceHistory.AddSeparator();
+            inferenceHistory.AddSeparator();
             List<Instrument> filteredInstruments = knowledgeBase.FindInstrumentsWithSpecifiedparameters(SelectedParameters);
             string instrumentsString = "";
             foreach (Instrument instrument in filteredInstruments)
@@ -339,6 +355,7 @@ namespace InstrumentExpertSystem
                 instrumentsString += instrument.Name + "\n";
             }
             FilteredInstruments = instrumentsString;
+            InferenceHistory = inferenceHistory.History;
         }
     }
 }

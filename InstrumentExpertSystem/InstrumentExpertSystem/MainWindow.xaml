@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InstrumentExpertSystem"
         mc:Ignorable="d"
-        Title="MainWindow" Height="564" Width="452">
+        Title="MainWindow" Height="589" Width="452">
     <Window.DataContext>
         <local:MainWindowViewModel />
     </Window.DataContext>
@@ -52,15 +52,22 @@
             <Label x:Name="label3_Copy7" Content="Is Melodic" HorizontalAlignment="Left" Margin="15,241,0,0" Height="26" VerticalAlignment="Top" Grid.Row="1"/>
             <CheckBox x:Name="checkBox_Copy10" Content="" HorizontalAlignment="Left" Margin="155,246,0,0" VerticalAlignment="Top" Height="21" Grid.Row="1" IsChecked="{Binding IsMelodic}"/>
             <CheckBox x:Name="checkBox_Copy11" Content="" HorizontalAlignment="Left" Margin="0,246,0,0" VerticalAlignment="Top" Height="21" Grid.Row="1" IsChecked="{Binding IsMelodicEnabled}"/>
-            <Label x:Name="label1" Content="Hz" HorizontalAlignment="Right" Grid.RowSpan="2" Height="26" VerticalAlignment="Top" Margin="0,1,16,0"/>
+            <Label x:Name="label1" Content="Hz" Grid.RowSpan="2" Height="26" VerticalAlignment="Top" Margin="396,1,16,0"/>
             <Label x:Name="label1_Copy" Content="Hz" HorizontalAlignment="Right" Height="26" VerticalAlignment="Top" Margin="0,18,16,0" Grid.Row="1"/>
             <Label x:Name="label1_Copy1" Content="dB" HorizontalAlignment="Right" Height="26" VerticalAlignment="Top" Margin="0,44,16,0" Grid.Row="1"/>
             <Label x:Name="label1_Copy2" Content="dB" HorizontalAlignment="Right" Height="26" VerticalAlignment="Top" Margin="0,70,16,0" Grid.Row="1"/>
             <Label x:Name="label1_Copy4" Content="s" HorizontalAlignment="Right" Height="26" VerticalAlignment="Top" Margin="0,215,16,0" Grid.Row="1"/>
         </Grid>
         <Label x:Name="label" Content="Loaded instruments:" HorizontalAlignment="Left" Margin="152,10,0,0" VerticalAlignment="Top" Height="24"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,344,0,10" TextWrapping="Wrap" Width="200" Text="{Binding FilteredInstruments}" Cursor="ScrollNS"/>
         <Button x:Name="button" Content="Identify instrument" HorizontalAlignment="Left" Margin="10,319,0,0" VerticalAlignment="Top" Width="185" Command="{Binding IdentifyInstrument}"/>
+        <ScrollViewer HorizontalAlignment="Left" Margin="10,370,0,10" Width="142">
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Width="132" Text="{Binding FilteredInstruments}" Cursor="ScrollNS" Height="179"/>
+        </ScrollViewer>
+        <ScrollViewer Margin="157,370,10,10">
+            <TextBlock x:Name="textBlock1" Text="{Binding InferenceHistory}" TextWrapping="Wrap"/>
+        </ScrollViewer>
+        <Label x:Name="label4" Content="Results" HorizontalAlignment="Left" Margin="10,339,0,0" Height="26" VerticalAlignment="Top"/>
+        <Label x:Name="label4_Copy" Content="Inference" Margin="157,337,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="59"/>
 
     </Grid>
 </Window>

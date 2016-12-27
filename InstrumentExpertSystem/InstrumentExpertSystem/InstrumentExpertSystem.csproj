@@ -62,6 +62,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="EnvelopeType.cs" />
+    <Compile Include="InferenceHistory.cs" />
     <Compile Include="Instrument.cs" />
     <Compile Include="InstrumentParameters\IsMelodic.cs" />
     <Compile Include="InstrumentParameters\CanModulateFrequency.cs" />
