@@ -3,7 +3,7 @@ using System;
 
 namespace InstrumentExpertSystem
 {
-    public class CanGliss : InstrumentParameter
+    public class CanGlissParameter : InstrumentParameter
     {
         public bool Can { get; set; }
 

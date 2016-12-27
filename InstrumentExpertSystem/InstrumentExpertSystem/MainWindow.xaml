@@ -5,14 +5,63 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InstrumentExpertSystem"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="564" Width="452">
     <Window.DataContext>
         <local:MainWindowViewModel />
     </Window.DataContext>
     <Grid>
         <Button x:Name="LoadKnowledgeBase" Content="Load Knowledge Base" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="142" Command="{Binding LoadKnowledgeBase}" />
-        <ListBox x:Name="knowledgeBaseInstruments" HorizontalAlignment="Left" Height="110" Margin="198,10,0,0" VerticalAlignment="Top" Width="240" />
-        <TextBox x:Name="knowledgeBaseInstrumentsCount" HorizontalAlignment="Left" Height="47" Margin="443,16,0,0" TextWrapping="Wrap" Text="{Binding KnowledgeBaseInstrumentsCount}" VerticalAlignment="Top" Width="49"/>
+        <TextBox x:Name="knowledgeBaseInstrumentsCount" HorizontalAlignment="Left" Height="24" Margin="269,10,0,0" TextWrapping="Wrap" Text="{Binding KnowledgeBaseInstrumentsCount}" VerticalAlignment="Top" Width="40" IsEnabled="False"/>
+        <Grid HorizontalAlignment="Left" Height="279" Margin="10,40,0,0" VerticalAlignment="Top" Width="436">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="267*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="label2" Content="Min Frequency" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,0,0,0" Grid.RowSpan="2"/>
+            <Label x:Name="label3" Content="Max Frequency" HorizontalAlignment="Left" Margin="15,18,0,0" Height="26" VerticalAlignment="Top" Grid.Row="1"/>
+            <Label x:Name="label3_Copy" Content="Min Volume" HorizontalAlignment="Left" Margin="15,44,0,0" Height="26" VerticalAlignment="Top" Grid.Row="1"/>
+            <Label x:Name="label3_Copy1" Content="Max Volume" HorizontalAlignment="Left" Margin="15,70,0,0" Height="26" VerticalAlignment="Top" Grid.Row="1"/>
+            <Label x:Name="label3_Copy2" Content="Can Gliss" HorizontalAlignment="Left" Margin="15,96,0,0" Height="26" VerticalAlignment="Top" Grid.Row="1"/>
+            <Label x:Name="label3_Copy3" Content="Envelope Type" HorizontalAlignment="Left" Margin="15,122,0,0" Height="26" VerticalAlignment="Top" Grid.Row="1"/>
+            <Label x:Name="label3_Copy4" Content="Single sound &#xD;&#xA;spectrum width" HorizontalAlignment="Left" Margin="15,148,0,0" Height="41" VerticalAlignment="Top" Grid.Row="1"/>
+            <Label x:Name="label3_Copy5" Content="Can Modulate" HorizontalAlignment="Left" Margin="15,189,0,0" Height="26" VerticalAlignment="Top" Grid.Row="1"/>
+            <Label x:Name="label3_Copy6" Content="Average sound duration" HorizontalAlignment="Left" Margin="15,215,0,0" Height="26" VerticalAlignment="Top" Grid.Row="1"/>
+            <Slider x:Name="slider" VerticalAlignment="Top" Height="26" Margin="155,0,89,0" Value="{Binding FrequencyMin}" Grid.RowSpan="2" Maximum="22000"/>
+            <TextBox x:Name="textBox" Height="26" TextWrapping="Wrap" Text="{Binding FrequencyMin}" VerticalAlignment="Top" HorizontalAlignment="Right" Width="49" Grid.RowSpan="2" Margin="0,0,40,0"/>
+            <Slider x:Name="slider_Copy" VerticalAlignment="Top" Height="26" Margin="155,18,89,0" Value="{Binding FrequencyMax}" Grid.Row="1" Maximum="22000"/>
+            <TextBox x:Name="textBox_Copy" Height="26" TextWrapping="Wrap" Text="{Binding FrequencyMax}" VerticalAlignment="Top" HorizontalAlignment="Right" Width="49" Margin="0,18,40,0" Grid.Row="1"/>
+            <Slider x:Name="slider_Copy1" VerticalAlignment="Top" Height="26" Margin="155,44,89,0"  Value="{Binding VolumeMin}" Grid.Row="1" Maximum="100" Minimum="-10"/>
+            <TextBox x:Name="textBox_Copy1" Height="26" TextWrapping="Wrap" Text="{Binding VolumeMin}" VerticalAlignment="Top" HorizontalAlignment="Right" Width="49" Margin="0,44,40,0" Grid.Row="1"/>
+            <Slider x:Name="slider_Copy2" VerticalAlignment="Top" Height="26" Margin="155,70,89,0" Value="{Binding VolumeMax}" Grid.Row="1" Maximum="100" Minimum="-10"/>
+            <TextBox x:Name="textBox_Copy2" Height="26" TextWrapping="Wrap" Text="{Binding VolumeMax}" VerticalAlignment="Top" HorizontalAlignment="Right" Width="49" Margin="0,70,40,0" Grid.Row="1"/>
+            <Slider x:Name="slider_Copy3" VerticalAlignment="Top" Height="26" Margin="155,163,89,0" Value="{Binding SingleSoundSpectrumWidth}" Grid.Row="1" Maximum="10000"/>
+            <TextBox x:Name="textBox_Copy3" Height="26" TextWrapping="Wrap" Text="{Binding SingleSoundSpectrumWidth}" VerticalAlignment="Top" HorizontalAlignment="Right" Width="49" Margin="0,163,40,0" Grid.Row="1"/>
+            <Slider x:Name="slider_Copy4" VerticalAlignment="Top" Height="26" Margin="155,215,89,0" Value="{Binding AverageSoundDuration}" Grid.Row="1"/>
+            <TextBox x:Name="textBox_Copy4" Height="26" TextWrapping="Wrap" Text="{Binding AverageSoundDuration}" VerticalAlignment="Top" HorizontalAlignment="Right" Width="49" Margin="0,215,40,0" Grid.Row="1"/>
+            <CheckBox x:Name="checkBox" Content="" HorizontalAlignment="Left" Margin="155,189,0,0" VerticalAlignment="Top" Height="21" Grid.Row="1" IsChecked="{Binding CanModulateFrequency}"/>
+            <CheckBox x:Name="checkBox_Copy" Content="" HorizontalAlignment="Left" Margin="155,101,0,0" VerticalAlignment="Top" Height="21" Grid.Row="1" IsChecked="{Binding CanGliss}"/>
+            <CheckBox x:Name="checkBox_Copy1" Content="" HorizontalAlignment="Left" Margin="0,6,0,0" VerticalAlignment="Top" Height="21" Grid.RowSpan="2" IsChecked="{Binding FrequencyMinEnabled}"/>
+            <CheckBox x:Name="checkBox_Copy2" Content="" HorizontalAlignment="Left" Margin="0,23,0,0" VerticalAlignment="Top" Height="21" Grid.Row="1" IsChecked="{Binding FrequencyMaxEnabled}"/>
+            <CheckBox x:Name="checkBox_Copy3" HorizontalAlignment="Left" Margin="0,49,0,0" VerticalAlignment="Top" Height="21" Grid.Row="1" IsChecked="{Binding VolumeMinEnabled}"/>
+            <CheckBox x:Name="checkBox_Copy4" Content="" HorizontalAlignment="Left" Margin="0,75,0,0" VerticalAlignment="Top" Height="21" Grid.Row="1" IsChecked="{Binding VolumeMaxEnabled}"/>
+            <CheckBox x:Name="checkBox_Copy5" Content="" HorizontalAlignment="Left" Margin="0,101,0,0" VerticalAlignment="Top" Height="21" Grid.Row="1" IsChecked="{Binding CanGlissEnabled}"/>
+            <CheckBox x:Name="checkBox_Copy6" Content="" HorizontalAlignment="Left" Margin="0,127,0,0" VerticalAlignment="Top" Height="21" Grid.Row="1" IsChecked="{Binding EnvelopeTypeEnabled}"/>
+            <CheckBox x:Name="checkBox_Copy7" Content="" HorizontalAlignment="Left" Margin="0,163,0,0" VerticalAlignment="Top" Height="21" Grid.Row="1" IsChecked="{Binding SingleSoundSpectrumWidthEnabled}"/>
+            <CheckBox x:Name="checkBox_Copy8" Content="" HorizontalAlignment="Left" Margin="0,194,0,0" VerticalAlignment="Top" Height="21" Grid.Row="1"  IsChecked="{Binding CanModulateEnabled}"/>
+            <CheckBox x:Name="checkBox_Copy9" Content="" HorizontalAlignment="Left" Margin="0,220,0,0" VerticalAlignment="Top" Height="21" Grid.Row="1"  IsChecked="{Binding AverageSoundDurationEnabled}"/>
+            <Label x:Name="label3_Copy7" Content="Is Melodic" HorizontalAlignment="Left" Margin="15,241,0,0" Height="26" VerticalAlignment="Top" Grid.Row="1"/>
+            <CheckBox x:Name="checkBox_Copy10" Content="" HorizontalAlignment="Left" Margin="155,246,0,0" VerticalAlignment="Top" Height="21" Grid.Row="1" IsChecked="{Binding IsMelodic}"/>
+            <CheckBox x:Name="checkBox_Copy11" Content="" HorizontalAlignment="Left" Margin="0,246,0,0" VerticalAlignment="Top" Height="21" Grid.Row="1" IsChecked="{Binding IsMelodicEnabled}"/>
+            <Label x:Name="label1" Content="Hz" HorizontalAlignment="Right" Grid.RowSpan="2" Height="26" VerticalAlignment="Top" Margin="0,1,16,0"/>
+            <Label x:Name="label1_Copy" Content="Hz" HorizontalAlignment="Right" Height="26" VerticalAlignment="Top" Margin="0,18,16,0" Grid.Row="1"/>
+            <Label x:Name="label1_Copy1" Content="dB" HorizontalAlignment="Right" Height="26" VerticalAlignment="Top" Margin="0,44,16,0" Grid.Row="1"/>
+            <Label x:Name="label1_Copy2" Content="dB" HorizontalAlignment="Right" Height="26" VerticalAlignment="Top" Margin="0,70,16,0" Grid.Row="1"/>
+            <Label x:Name="label1_Copy3" Content="Hz" HorizontalAlignment="Right" Height="26" VerticalAlignment="Top" Margin="0,163,16,0" Grid.Row="1"/>
+            <Label x:Name="label1_Copy4" Content="s" HorizontalAlignment="Right" Height="26" VerticalAlignment="Top" Margin="0,215,16,0" Grid.Row="1"/>
+        </Grid>
+        <Label x:Name="label" Content="Loaded instruments:" HorizontalAlignment="Left" Margin="152,10,0,0" VerticalAlignment="Top" Height="24"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="152" Width="419" Text="{Binding FilteredInstruments}" Cursor="ScrollNS"/>
+        <Button x:Name="button" Content="Identify instrument" HorizontalAlignment="Left" Margin="10,319,0,0" VerticalAlignment="Top" Width="185" Command="{Binding IdentifyInstrument}"/>
 
     </Grid>
 </Window>
