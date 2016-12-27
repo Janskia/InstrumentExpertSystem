@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:c="urn:schemas-microsoft-com:office:component:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:x2="http://schemas.microsoft.com/office/excel/2003/xml" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+    <Colors>
+      <Color>
+        <Index>3</Index>
+        <RGB>#c0c0c0</RGB>
+      </Color>
+      <Color>
+        <Index>4</Index>
+        <RGB>#ff0000</RGB>
+      </Color>
+    </Colors>
+  </OfficeDocumentSettings>
+  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+    <WindowHeight>9000</WindowHeight>
+    <WindowWidth>13860</WindowWidth>
+    <WindowTopX>240</WindowTopX>
+    <WindowTopY>75</WindowTopY>
+    <ProtectStructure>False</ProtectStructure>
+    <ProtectWindows>False</ProtectWindows>
+  </ExcelWorkbook>
+  <Styles>
+    <Style ss:ID="Default" ss:Name="Default"/>
+    <Style ss:ID="Result" ss:Name="Result">
+      <Font ss:Bold="1" ss:Italic="1" ss:Underline="Single"/>
+    </Style>
+    <Style ss:ID="Result2" ss:Name="Result2">
+      <Font ss:Bold="1" ss:Italic="1" ss:Underline="Single"/>
+      <NumberFormat ss:Format="Currency"/>
+    </Style>
+    <Style ss:ID="Heading" ss:Name="Heading">
+      <Font ss:Bold="1" ss:Italic="1" ss:Size="16"/>
+    </Style>
+    <Style ss:ID="Heading1" ss:Name="Heading1">
+      <Font ss:Bold="1" ss:Italic="1" ss:Size="16"/>
+    </Style>
+    <Style ss:ID="co1"/>
+    <Style ss:ID="co2"/>
+    <Style ss:ID="co3"/>
+    <Style ss:ID="co4"/>
+    <Style ss:ID="co5"/>
+    <Style ss:ID="co6"/>
+    <Style ss:ID="co7"/>
+    <Style ss:ID="co8"/>
+    <Style ss:ID="ta1"/>
+  </Styles>
+  <ss:Worksheet ss:Name="Arkusz1">
+    <Table ss:StyleID="ta1">
+      <Column ss:Span="1" ss:Width="89.2913"/>
+      <Column ss:Index="3" ss:Width="93.2598"/>
+      <Column ss:Span="1" ss:Width="64.0063"/>
+      <Column ss:Index="6" ss:Width="121.4362"/>
+      <Column ss:Width="108.1134"/>
+      <Column ss:Width="124.611"/>
+      <Column ss:Width="105.7606"/>
+      <Column ss:Width="120.6425"/>
+      <Column ss:Width="64.0063"/>
+      <Row ss:Height="12.8126">
+        <Cell>
+          <Data ss:Type="String">Name</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">FrequencyMin</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">FrequencyMax</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">VolumeMin</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">VolumeMax</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CanGliss</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">EnvelopeType</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">SpectrumOfSingleSound</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">FrequencyModulation</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">AverageSoundDuration</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">IsMelodic</Data>
+        </Cell>
+      </Row>
+      <Row ss:Height="12.8126">
+        <Cell>
+          <Data ss:Type="String">Fortepian</Data>
+        </Cell>
+        <Cell ss:Index="6">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Fixed</Data>
+        </Cell>
+        <Cell ss:Index="9">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell ss:Index="11">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+      </Row>
+      <Row ss:Height="12.8126">
+        <Cell>
+          <Data ss:Type="String">Piano</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">30</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">3900</Data>
+        </Cell>
+        <Cell ss:Index="6">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Fixed</Data>
+        </Cell>
+        <Cell ss:Index="9">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell ss:Index="11">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+      </Row>
+      <Row ss:Height="12.8126">
+        <Cell>
+          <Data ss:Type="String">HammondOrgan</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">20</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">7500</Data>
+        </Cell>
+        <Cell ss:Index="6">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Flexible</Data>
+        </Cell>
+        <Cell ss:Index="9">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+        <Cell ss:Index="11">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+      </Row>
+      <Row ss:Height="12.8126">
+        <Cell>
+          <Data ss:Type="String">Guitar</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">80</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">5000</Data>
+        </Cell>
+        <Cell ss:Index="6">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Fixed</Data>
+        </Cell>
+        <Cell ss:Index="9">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+        <Cell ss:Index="11">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+      </Row>
+      <Row ss:Height="12.8126">
+        <Cell>
+          <Data ss:Type="String">Flute</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">300</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">12000</Data>
+        </Cell>
+        <Cell ss:Index="6">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Flexible</Data>
+        </Cell>
+        <Cell ss:Index="9">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell ss:Index="11">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+      </Row>
+      <Row ss:Height="12.8126">
+        <Cell>
+          <Data ss:Type="String">TenorSax</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">120</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">8000</Data>
+        </Cell>
+        <Cell ss:Index="6">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Flexible</Data>
+        </Cell>
+        <Cell ss:Index="9">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell ss:Index="11">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+      </Row>
+      <Row ss:Height="12.8126">
+        <Cell>
+          <Data ss:Type="String">Trombone</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">80</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">10000</Data>
+        </Cell>
+        <Cell ss:Index="6">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Flexible</Data>
+        </Cell>
+        <Cell ss:Index="9">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+        <Cell ss:Index="11">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+      </Row>
+      <Row ss:Height="12.8126">
+        <Cell>
+          <Data ss:Type="String">Trumpet</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">180</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">8000</Data>
+        </Cell>
+        <Cell ss:Index="6">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Flexible</Data>
+        </Cell>
+        <Cell ss:Index="9">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell ss:Index="11">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+      </Row>
+      <Row ss:Height="12.8126">
+        <Cell>
+          <Data ss:Type="String">Clarinet</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">150</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">13000</Data>
+        </Cell>
+        <Cell ss:Index="6">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Flexible</Data>
+        </Cell>
+        <Cell ss:Index="9">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell ss:Index="11">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+      </Row>
+      <Row ss:Index="11" ss:Height="12.8126">
+        <Cell>
+          <Data ss:Type="String">Oboe</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">230</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">13000</Data>
+        </Cell>
+        <Cell ss:Index="6">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Flexible</Data>
+        </Cell>
+        <Cell ss:Index="9">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell ss:Index="11">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+      </Row>
+      <Row ss:Height="12.8126">
+        <Cell>
+          <Data ss:Type="String">Drums</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">60</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">16000</Data>
+        </Cell>
+        <Cell ss:Index="6">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Fixed</Data>
+        </Cell>
+        <Cell ss:Index="9">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell ss:Index="11">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+      </Row>
+      <Row ss:Height="12.8126">
+        <Cell>
+          <Data ss:Type="String">Vibraphone</Data>
+        </Cell>
+        <Cell ss:Index="6">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Fixed</Data>
+        </Cell>
+        <Cell ss:Index="9">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell ss:Index="11">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+      </Row>
+      <Row ss:Height="12.8126">
+        <Cell>
+          <Data ss:Type="String">Congas</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">300</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">5000</Data>
+        </Cell>
+        <Cell ss:Index="6">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Fixed</Data>
+        </Cell>
+        <Cell ss:Index="9">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell ss:Index="11">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+      </Row>
+      <Row ss:Height="12.8126">
+        <Cell>
+          <Data ss:Type="String">Cahon</Data>
+        </Cell>
+        <Cell ss:Index="6">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Fixed</Data>
+        </Cell>
+        <Cell ss:Index="9">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell ss:Index="11">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+      </Row>
+      <Row ss:Height="12.8126">
+        <Cell>
+          <Data ss:Type="String">ElectricBass</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">50</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">5000</Data>
+        </Cell>
+        <Cell ss:Index="6">
+          <Data ss:Type="String">false</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Fixed</Data>
+        </Cell>
+        <Cell ss:Index="9">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+        <Cell ss:Index="11">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+      </Row>
+      <Row ss:Height="12.8126">
+        <Cell>
+          <Data ss:Type="String">DoubleBass</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">30</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">4000</Data>
+        </Cell>
+        <Cell ss:Index="6">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Flexible, Fixed</Data>
+        </Cell>
+        <Cell ss:Index="9">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+        <Cell ss:Index="11">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+      </Row>
+      <Row ss:Height="12.8126">
+        <Cell>
+          <Data ss:Type="String">Violin</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">200</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">17000</Data>
+        </Cell>
+        <Cell ss:Index="6">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Flexible, Fixed</Data>
+        </Cell>
+        <Cell ss:Index="9">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+        <Cell ss:Index="11">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+      </Row>
+      <Row ss:Height="12.8126">
+        <Cell>
+          <Data ss:Type="String">Cello</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">80</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">7000</Data>
+        </Cell>
+        <Cell ss:Index="6">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Flexible, Fixed</Data>
+        </Cell>
+        <Cell ss:Index="9">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+        <Cell ss:Index="11">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+      </Row>
+      <Row ss:Height="12.8126">
+        <Cell>
+          <Data ss:Type="String">ManVocalist</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">100</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">16000</Data>
+        </Cell>
+        <Cell ss:Index="6">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Flexible</Data>
+        </Cell>
+        <Cell ss:Index="9">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+        <Cell ss:Index="11">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+      </Row>
+      <Row ss:Height="12.8126">
+        <Cell>
+          <Data ss:Type="String">WomanVocalist</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">250</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="Number">16000</Data>
+        </Cell>
+        <Cell ss:Index="6">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Flexible</Data>
+        </Cell>
+        <Cell ss:Index="9">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+        <Cell ss:Index="11">
+          <Data ss:Type="String">true</Data>
+        </Cell>
+      </Row>
+    </Table>
+    <x:WorksheetOptions/>
+  </ss:Worksheet>
+</Workbook>

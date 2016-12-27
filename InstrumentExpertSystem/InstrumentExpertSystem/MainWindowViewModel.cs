@@ -298,6 +298,7 @@ namespace InstrumentExpertSystem
             {
                 handler(this, new PropertyChangedEventArgs(propertyName));
             }
+            IdentifyInstrument.Execute(null);
         }
 
         public MainWindowViewModel()
